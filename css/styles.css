@@ -33,18 +33,19 @@ img {display: block;}
 
 /* header */
 
+.page-header {border-bottom: 1px solid #e7e9fc;}
+
 .page-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e7e9fc;
 }
 
 .header-nav, .nav-list, .contacts-nav {
     display: flex; 
     align-items: center;}
 
-.header-nav {gap: 76px;}
+/*.header-nav {gap: 76px;} - не пройшов автоперевірку*/
 .nav-list {gap: 40px;}
 .contacts-nav {gap: 40px;}
 
@@ -60,6 +61,7 @@ img {display: block;}
 
 .header-logo {
     padding: 24px 0;
+        margin-right: 76px;
 }
 
 .header-nav .logo-studio {color: #2e2f42;}   
@@ -96,9 +98,8 @@ address {font-style: normal;}
 
 /* hero */
 
-.section-hero .container {
-padding-top: 188px;
-padding-bottom: 188px;
+.section-hero {
+padding: 188px 0;
     background-color: #2e2f42;
 
 }
@@ -110,7 +111,7 @@ padding-bottom: 188px;
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    width: 496px;
+    max-width: 496px;
     margin-left: auto;
         margin-right: auto; 
                 margin-bottom: 48px;
@@ -129,7 +130,8 @@ padding-bottom: 188px;
     color: #fff;
     background-color: #4d5ae5;
     height: 56px;
-    width: 169px;
+    min-width: 169px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -155,9 +157,8 @@ padding-bottom: 188px;
         overflow: hidden;
 }
 
-.section-advantages .container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+.section-advantages {
+    padding: 120px 0;
 }
 
 .advantages-list {
@@ -165,7 +166,7 @@ padding-bottom: 188px;
     justify-content: space-between;
 }
 
-.advantages-item {width: calc(100%-72)/4;}
+.advantages-item {width: calc(100%-72px)/4;}
 .advantages-item:not(:last-child) {
     margin-right: 24px;
 }
@@ -190,11 +191,10 @@ padding-bottom: 188px;
 
 /* team */
 
-.section-team .container
+.section-team
 {
     background-color: #f4f4fd;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
 }
 
 .team-title 
@@ -219,12 +219,13 @@ padding-bottom: 188px;
 
 .team-item
 {
-    display: flex;
-    flex-direction: column;
     background-color: #fff;
-    align-items: center;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 border-radius: 0 0 4px 4px;
+}
+
+.team-item-card {
+padding: 32px 0;
 }
 
 .team-item-title
@@ -234,6 +235,8 @@ border-radius: 0 0 4px 4px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-item-text
@@ -241,17 +244,13 @@ border-radius: 0 0 4px 4px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
 }
-
-.team-item img {margin-bottom: 32px;}
-.team-item .team-item-title {margin-bottom: 8px;}
-.team-item .team-item-text {padding-bottom: 32px;}
 
 /* portfolio */
 
-.section-portfolio .container {
-    padding-top: 120px;
-        padding-bottom: 120px;
+.section-portfolio {
+    padding: 120px 0;
 }
 
 .portfolio-title
@@ -275,7 +274,7 @@ border-radius: 0 0 4px 4px;
 .portfolio-item-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    /* gap: 8px; - не пройшов автоперевірку*/
     padding: 32px 16px;
     border-bottom: 1px solid #e7e9fc;
         border-left: 1px solid #e7e9fc;
@@ -289,6 +288,7 @@ border-radius: 0 0 4px 4px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portfolio-item-text
@@ -300,15 +300,21 @@ border-radius: 0 0 4px 4px;
 
 /* footer */
 
-.page-footer .container
+.page-footer {
+    padding: 100px 0;
+background-color: #2e2f42;}
+
+/* .page-footer .container
 {
     display: flex;
     flex-direction: column;
-    background-color: #2e2f42;
-    padding-top: 100px;
-    padding-bottom: 100px;
     gap: 16px;
     align-items: flex-start;
+} - не пройшов автоперевірку*/
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .page-footer .logo-studio
@@ -321,7 +327,7 @@ border-radius: 0 0 4px 4px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    width: 264px;
+    max-width: 264px;
     color: #f4f4fd;
 }
 
